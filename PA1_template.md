@@ -1,6 +1,6 @@
 ---
 title: 'Reproducible Research: Peer Assessment 1'
-output:
+output: 
   html_document:
     keep_md: yes
   pdf_document: default
@@ -92,7 +92,7 @@ median(sumactperday$steps)
 ```
 
 ## What is the average daily activity pattern?
-### Make a time series plot (i.e. \color{red}{\verb|type = "l"|}type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+### Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 We start by grouping the dataset by interval.
 
 ```r
@@ -126,7 +126,7 @@ sumactbyint$interval[which.max(sumactbyint$steps)]
 ## [1] 835
 ```
 ## Imputing missing values
-### Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with \color{red}{\verb|NA|}NAs)
+### Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 We can find the number of missing rows by simply subtracting the rows of the subset we used from the original dataset.
 
 ```r
@@ -216,7 +216,7 @@ Then we use the ```aggregate``` function to find the average number of steps tak
 sumactbytype <- aggregate(steps ~ interval + type, actcombined, mean)
 ```
 
-### Make a panel plot containing a time series plot (i.e. \color{red}{\verb|type = "l"|}type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
+### Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 We then make a panel plot using the code below: 
 
 ```r
