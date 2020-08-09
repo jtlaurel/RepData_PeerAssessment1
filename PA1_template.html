@@ -386,7 +386,7 @@ summary {
 </div>
 <div id="processtransform-the-data-if-necessary-into-a-format-suitable-for-your-analysis" class="section level3">
 <h3>Process/transform the data (if necessary) into a format suitable for your analysis</h3>
-<p>We then convert the dates in the dataset from strings into usable dates instead of strings, while also eliminating any data that contains missing values.</p>
+<p>We then convert the dates in the dataset from strings into usable dates, while also eliminating any data that contains missing values.</p>
 <pre class="r"><code>activity$date &lt;- as.Date(activity$date)
 activityreal &lt;- activity[complete.cases(activity), ]</code></pre>
 </div>

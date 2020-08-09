@@ -20,7 +20,7 @@ activity <- read.csv("./activity.csv")
 ```
 
 ### Process/transform the data (if necessary) into a format suitable for your analysis
-We then convert the dates in the dataset from strings into usable dates instead of strings, while also eliminating any data that contains missing values.
+We then convert the dates in the dataset from strings into usable dates, while also eliminating any data that contains missing values.
 ```{r, echo=TRUE}
 activity$date <- as.Date(activity$date)
 activityreal <- activity[complete.cases(activity), ]

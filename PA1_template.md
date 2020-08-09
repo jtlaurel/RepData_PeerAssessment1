@@ -42,7 +42,7 @@ activity <- read.csv("./activity.csv")
 ```
 
 ### Process/transform the data (if necessary) into a format suitable for your analysis
-We then convert the dates in the dataset from strings into usable dates instead of strings, while also eliminating any data that contains missing values.
+We then convert the dates in the dataset from strings into usable dates, while also eliminating any data that contains missing values.
 
 ```r
 activity$date <- as.Date(activity$date)
