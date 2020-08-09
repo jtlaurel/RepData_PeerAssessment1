@@ -168,11 +168,7 @@ sumactcombined <- aggregate(steps ~ date, actcombined, sum)
 We can then use ```qplot``` to plot the new histogram.
 
 ```r
-qplot(sumactcombined$steps, xlab = "Steps", ylab = "Count", main = "Histogram of Total Number of Steps per Day")
-```
-
-```
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+qplot(sumactcombined$steps, xlab = "Steps", ylab = "Count", main = "Histogram of Total Number of Steps per Day", bins = 30)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
