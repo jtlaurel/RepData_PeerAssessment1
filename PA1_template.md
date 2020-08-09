@@ -173,7 +173,7 @@ qplot(sumactcombined$steps, xlab = "Steps", ylab = "Count", main = "Histogram of
 
 ![](PA1_template_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
-Similarly to before, we use the ```mean``` and ```median``` functions to find the new mean and medians
+Similarly to before, we use the ```mean``` and ```median``` functions to find the new mean and median
 
 ```r
 mean(sumactcombined$steps)
@@ -190,12 +190,12 @@ median(sumactcombined$steps)
 ```
 ## [1] 10766.19
 ```
-We can see that while the averages stayed the same the median of the imputed data was different increased to match the mean. This is demonstrated in the histograms as well, as we can see a larger portion of the histogram has shifted higher.
+We can see that while the averages stayed the same, the median of the imputed data was different and increased to match the mean. This is demonstrated in the histograms as well, as we can see a larger portion of the imputed histogram has shifted higher.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
 ### Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
-We begin by  using the ```weekdays``` function in order to find the day of the week for each date. We append this to the data frame using cbind to make the data frame reflect this.
+We begin by  using the ```weekdays``` function in order to find the day of the week for each date. We append this to the data frame using ```cbind``` to make the data frame reflect this.
 
 ```r
 day <- weekdays(actcombined$date)
@@ -226,4 +226,4 @@ ggplot(sumactbytype, aes(interval, steps)) +
 
 ![](PA1_template_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
 
-We can see from the panel plot that activity is significantly more spread out throughout the day on weekends vs. weekday. While weekdays have sharper spikes and lower troughs possibly because of ones commute and work schedule.
+We can see from the panel plot that activity is significantly more spread out throughout the day on weekends vs. weekdays. However, weekdays have sharper spikes and lower troughs possibly because of one's commute and work schedule.
