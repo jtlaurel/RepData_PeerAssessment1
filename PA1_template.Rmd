@@ -6,10 +6,8 @@ output:
   pdf_document: default
 ---
 
-# Reproducible Research: Peer Assessment 1
-
 ## Loading and preprocessing the data
-First we load the relevant libraries we need in order to answer the questions presented. ```dplyr``` is needed to group data and ```ggplot2``` is needed too plot the results.
+First we load the relevant libraries we need in order to answer the questions presented. ```dplyr``` is needed to group data and ```ggplot2``` is needed to plot the results.
 ```{r, echo=TRUE}
 library(dplyr)
 library(ggplot2)
